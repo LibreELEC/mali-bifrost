@@ -1,31 +1,12 @@
-Mali Bifrost support for Amlogic Meson G12A Family
-==================================================
+# mali-bifrost
 
-**Big Fat Warning: This is still in development**
+The Following SoCs are using the Mali-G31 IP:
+- Meson G12A: S905X2/D2/Y2
+- Meson SM1: S905X3/D3/Y3
 
-The Following SoCs are using the Mali-G31 IP :
-- Meson G12A : S905X2, S905Y2 and S905D2
+The Following SoCs are using the Mali-G52 IP:
+- Meson G12B : S922X and A311D
 
-The Following SoCs are using the Mali-G52 IP :
-- Meson G12B : S922X
+The original upstream sources are obtained from:
 
-This distribution adds platform support for these families.
-
-HowTo
-=====
-
-```
-$ make KDIR=/path/to/amlogic/upstream/linux ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- CONFIG_NAME=config.meson-g12a
-```
-
-Copy mali_kbase.ko to root filesystem and boot.
-
-Sources
-=======
-
-Original Mali kernel driver can be downloaded from : https://developer.arm.com/products/software/mali-drivers/bifrost-kernel
-
-The xf86-video-armsoc should be used in user space for X11 :
-- https://github.com/superna9999/xf86-video-armsoc
-
-This version will eventually work with the PanFrost Mesa effort.
+https://developer.arm.com/products/software/mali-drivers/bifrost-kernel
